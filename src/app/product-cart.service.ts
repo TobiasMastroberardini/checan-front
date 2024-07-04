@@ -11,7 +11,6 @@ import { Product } from './product/Product';
 export class ProductCartService {
   private _cartList: Product[] = [];
   cartList: BehaviorSubject<Product[]> = new BehaviorSubject(this._cartList);
-
   private apiUrl = 'https://tmastro.pythonanywhere.com/';
 
   constructor(private alertService: AlertService, private http: HttpClient) {
